@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="menu">
+                <h2 style="color: #800000;">jkfha <a href="./cadastro.html">Não tem uma conta?</a></h2>
+            </nav>
+        </header>
+        <section class="banner">
+            <h1>Login do McZidas</h1>
+            <p>Entre na sua conta.</p>
+            <img src="./img/logo.jpg" alt="imglogo">
+        </section>
+        <div class="form-container">
+            <h2>Cadastro</h2>
+            <form id="login-form">
+                <label for="login-username">Nome de usuário:</label><br>
+                <input type="text" id="login-username" name="login-username" required><br>
+                
+                <label for="login-password">Senha:</label><br>
+                <input type="password" id="login-password" name="login-password" required><br>
+                
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+        <footer>
+            
+        </footer>
+    </div>
+    <script>
+        document.getElementById('login-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>

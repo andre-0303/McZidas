@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja McZidas</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+       <header>
+        <nav class="menu">
+            <img src="./img/logo-removebg-preview.png" alt="logo" id="logo-img">
+            <a href="#banner_" class="menu-item">Início</a>
+            <a href="#sobre" class="menu-item">Sobre</a>
+            <a href="#contato" class="menu-item">Contato</a>
+            <a href="./cadastro.html" class="menu-item">Cadastre-se aqui</a>
+            <a href="./login.html" class="menu-item">Entrar</a>
+            
+        </nav>
+        <div class="botao" onclick="myFunction(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+          </div>
+
+       
+    </header>
+       <section class="banner">
+        <h1>Seja bem vindo ao McZidas</h1>
+            <p>As comidas mais brabas você encontra aqui!</p>
+            <img src="./img/logo.jpg" alt="imglogo">
+    </section>
+    <section class="produtos">
+        <!-- Titulo -->
+        <h2>Nossos Produtos</h2>
+        <!-- Produtos -->
+        <div>
+            <div class="produto" onclick="confirmarCompra()"> 
+                <img src="./img/pizzafe.jpg" alt="produto" class="produto-imagem">
+                <h3 class="produto-nome">Comida 1</h3>
+                <p class="produto-descricao">Pizza de Feijão</p>
+                <span class="produto-preco">R$:25,00</span>
+            </div>
+            <!-- Produto -->
+            <div class="produto" onclick="confirmarCompra()">
+                <img src="./img/sorvete.jpg" alt="produto" class="produto-imagem">
+                <h3 class="produto-nome">Comida 2</h3>
+                <p class="produto-descricao">Sorvete de Feijão</p>
+                <span class="produto-preco">R$:30,00</span>
+            </div>
+            <!-- Produto -->
+            <div class="produto" onclick="confirmarCompra()">
+                <img src="./img/yi.jpg" alt="produto" class="produto-imagem">
+                <h3 class="produto-nome">Comida 3</h3>
+                <p class="produto-descricao">Ying-Yang Feijão</p>
+                <span class="produto-preco">R$:15,00</span>
+            </div>
+            <!-- Produto -->
+            <div class="produto" onclick="confirmarCompra()">
+                <img src="./img/suc.jpg" alt="produto" class="produto-imagem">
+                <h3 class="produto-nome">Comida 4</h3>
+                <p class="produto-descricao">Suco de Feijão</p>
+                <span class="produto-preco">R$:10,00</span>
+            </div>
+        </div>
+    </section>
+    <section class="produtos" onclick="confirmarCompra()">
+        <!-- Titulo -->
+        <h2>Nossos Produtos</h2>
+        <!-- Produtos -->
+        <div>
+            <div class="produto" onclick="confirmarCompra()">
+                <img src="./img/miojo.jpg" alt="produto" class="produto-imagem">
+                <h3 class="produto-nome">Comida 5</h3>
+                <p class="produto-descricao">Miojo de Feijão</p>
+                <span class="produto-preco">R$:2,00</span>
+            </div>
+            <!-- Produto -->
+            <div class="produto" onclick="confirmarCompra()">
+                <img src="./img/pan.jpg" alt="produto" class="produto-imagem">
+                <h3 class="produto-nome">Comida 6</h3>
+                <p class="produto-descricao">Panqueca de Feijão</p>
+                <span class="produto-preco">R$:12,00</span>
+            </div>
+            <!-- Produto -->
+            <div class="produto" onclick="confirmarCompra()">
+                <img src="./img/ham.jpg" alt="produto" class="produto-imagem">
+                <h3 class="produto-nome">Comida 7</h3>
+                <p class="produto-descricao">Hamburguer de Feijão</p>
+                <span class="produto-preco">R$:20,00</span>
+            </div>
+            <!-- Produto -->
+            <div class="produto" onclick="confirmarCompra()">
+                <img src="./img/fe.jpg" alt="produto" class="produto-imagem">
+                <h3 class="produto-nome">Comida 8</h3>
+                <p class="produto-descricao">Feijoada</p>
+                <span class="produto-preco">R$:25,00</span>
+            </div>
+        </div>
+    </section>
+    <section id="sobre">
+        <h1>Sobre nós</h1>
+        <p>Nós somos a McZidas, fundada em 2024 por alunos da InforG8, esse site tem como proposta apresentar nossas receitas a base de feijão. Uma comida nutritiva e que alegra os dias de quem come.</p>
+    </section>
+    <section id="contato">
+        <h1>Nossos contatos</h1>
+        <p><b>(88)9914162457</b></p>
+        <p><b>(88)9946143613</b></p>
+        <h3>Contate-nos pelo email também:</h3>
+        <p><b>zidas123@gmail.com</b></p>
+    </section>
+
+    <footer>
+        <p>&copy; Todos os direitos reservados 2024. Desenvolvido por André & Elyssandra</p>
+    </footer>
+</div>
+    </div>
+    <script>
+        function myFunction(x) {
+         x.classList.toggle("change");
+         //fazer o menu aparecer
+         let menu = document.querySelector(".menu");
+         console.log(menu)
+         if(menu.style.display == 'block'){
+            menu.style.display = 'none'
+         }else{
+            menu.style.display = 'block'
+
+         }
+        
+    }
+    function confirmarCompra() {
+    const confirmacao = confirm("Você quer confirmar a compra?");
+    if (confirmacao) {
+        document.getElementById('compraConfirmada').style.display = 'block';
+    }else{
+        alert("Se lascar então.");
+    }
+}
+    </script>
+</body>
+</html>

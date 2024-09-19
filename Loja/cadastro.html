@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro do McZidas</title>
+    <link rel="stylesheet" href="./css/cadastro.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav class="menu">
+                <h2 style="color: #800000;">dsgasf<a href="./index.html" id="site-prin">Volte para o site principal</a></h2>
+                
+            </nav>
+        </header>
+        <section class="banner">
+            <h1>Cadastro do McZidas</h1>
+                <p>Cadastre-se no nosso site para pedir os nossos deliciosos produtos!</p>
+                <img src="./img/logo.jpg" alt="imglogo">
+        </section>
+        <div class="form-container">
+            <h2>Cadastro</h2>
+            <form id="signup-form" method="POST" action="processar.php">
+                <label for="signup-username">Nome de usuário:</label><br>
+                <input type="text" id="signup-username" name="signup-username" required><br>
+                
+                <label for="signup-email">Email:</label><br>
+                <input type="email" id="signup-email" name="signup-email" required><br>
+                
+                <label for="signup-password">Senha:</label><br>
+                <input type="password" id="signup-password" name="signup-password" required><br>
+                
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+        <footer>
+            <a href="./login.html" style="margin-left: 580px;">Já tem uma conta? Entre aqui.</a>
+        </footer>
+        
+    </div>
+    <script>
+        document.getElementById('signup-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            window.location.href = 'index.html';
+        });
+    </script>
+</body>
+</html>
